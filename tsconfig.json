@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": "./src", // Make sure to set baseUrl
+    "paths": {
+      "@constants/*": ["constants/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"]
+    }
+    // Other configurations...
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

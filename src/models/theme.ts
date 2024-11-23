@@ -1,0 +1,127 @@
+// theme.ts
+import { Theme } from "@emotion/react";
+import { spacing } from "../constants/theme/spacing";
+import { borderRadius } from "../constants/theme/borderRadius";
+import { iconSizes } from "../constants/theme/iconSizes";
+
+export const lightTheme: Theme = {
+  mode: "light",
+  palette: {
+    text: "#612800",
+    background: "#ffe0d1",
+    primary: "#8cc344",
+    secondary: "#ffb3d1",
+    accent: " #fff06b",
+  },
+  gradients: {
+    linearPrimarySecondary: "linear-gradient(#8cc344, #ffb3d1)",
+    linearPrimaryAccent: "linear-gradient(#8cc344, #fff06b)",
+    linearSecondaryAccent: "linear-gradient(#ffb3d1, #fff06b)",
+    radialPrimarySecondary: "radial-gradient(#8cc344, #ffb3d1)",
+    radialPrimaryAccent: "radial-gradient(#8cc344, #fff06b)",
+    radialSecondaryAccent: "radial-gradient(#ffb3d1, #fff06b)",
+  },
+  shades: {
+    text: {
+      50: "#fff0e5",
+      100: "#ffe1cc",
+      200: "#ffc499",
+      300: "#ffa666",
+      400: "#ff8833",
+      500: "#ff6a00",
+      600: "#cc5500",
+      700: "#994000",
+      800: "#662b00",
+      900: "#331500",
+      950: "#1a0b00",
+    },
+    background: {
+      50: "#ffeee5",
+      100: "#ffddcc",
+      200: "#ffbb99",
+      300: "#ff9966",
+      400: "#ff7733",
+      500: "#ff5500",
+      600: "#cc4400",
+      700: "#993300",
+      800: "#662200",
+      900: "#331100",
+      950: "#1a0900",
+    },
+    primary: {
+      50: "#f3f9ec",
+      100: "#e7f3d8",
+      200: "#cfe6b2",
+      300: "#b8da8b",
+      400: "#a0cd65",
+      500: "#88c13e",
+      600: "#6d9a32",
+      700: "#527425",
+      800: "#364d19",
+      900: "#1b270c",
+      950: "#0e1306",
+    },
+    secondary: {
+      50: "#ffe5f0",
+      100: "#ffcce0",
+      200: "#ff99c2",
+      300: "#ff66a3",
+      400: "#ff3385",
+      500: "#ff0066",
+      600: "#cc0052",
+      700: "#99003d",
+      800: "#660029",
+      900: "#330014",
+      950: "#1a000a",
+    },
+    accent: {
+      50: "#fffce5",
+      100: "#fffacc",
+      200: "#fff599",
+      300: "#fff066",
+      400: "#ffeb33",
+      500: "#ffe500",
+      600: "#ccb800",
+      700: "#998a00",
+      800: "#665c00",
+      900: "#332e00",
+      950: "#1a1700",
+    },
+  },
+  spacing,
+  borderRadius,
+  iconSizes,
+  typography: {
+    fontSize: {
+      small: "0.875rem",
+      medium: "1rem",
+      large: "1.25rem",
+    },
+    fontWeight: {
+      light: 300,
+      regular: 400,
+      bold: 700,
+    },
+    fontFamily: "'Roboto', 'Arial', sans-serif",
+  },
+};
+
+export const darkTheme: Theme = {
+  ...lightTheme,
+  mode: "dark",
+  palette: {
+    text: "#ffc69e",
+    background: "#2e0f00",
+    primary: "#83b93c",
+    secondary: "#4d001f",
+    accent: "#948500",
+  },
+  gradients: {
+    linearPrimarySecondary: "linear-gradient(#83b93c, #4d001f)",
+    linearPrimaryAccent: "linear-gradient(#83b93c, #948500)",
+    linearSecondaryAccent: "linear-gradient(#4d001f, #948500)",
+    radialPrimarySecondary: "radial-gradient(#83b93c, #4d001f)",
+    radialPrimaryAccent: "radial-gradient(#83b93c, #948500)",
+    radialSecondaryAccent: "radial-gradient(#4d001f, #948500)",
+  },
+};

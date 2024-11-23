@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "DynaPuff";
+  src: local("DynaPuff-VariableFont_wdth,wght"),
+    url("src/assets/fonts/DynaPuff/DynaPuff-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: local("BricolageGrotesque-VariableFont_opsz,wdth,wght"),
+    url("src/assets/fonts/BricolageGrotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+}
+
+body {
+  font-family: "BricolageGrotesque";
+  font-size: 16px;
+  font-weight: 600;
+}
