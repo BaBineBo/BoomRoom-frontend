@@ -1,3 +1,4 @@
-
 echo "run linter"
 npm run lint
+echo "run tests"
+npx vitest
