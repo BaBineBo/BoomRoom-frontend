@@ -1,8 +1,8 @@
 import { useMemo } from "react";
-import { useTheme } from "../../../hooks/useTheme";
-import SunSVG from "../../../assets/sun.svg?react";
-import MoonSVG from "../../../assets/moon.svg?react";
-import { IconButton } from "../Button/IconButton";
+import { useTheme } from "../../hooks/useTheme";
+import SunSVG from "../../assets/sun.svg?react";
+import MoonSVG from "../../assets/moon.svg?react";
+import { IconButton } from "../atoms/Button/IconButton";
 
 export const ToggleTheme = () => {
   const { theme, toggleTheme } = useTheme();

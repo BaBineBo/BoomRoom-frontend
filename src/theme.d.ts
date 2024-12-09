@@ -3,7 +3,6 @@ import "@emotion/react";
 import { spacing } from "./constants/theme/spacing";
 import { borderRadius } from "./constants/theme/borderRadius";
 import { iconSizes } from "./constants/theme/iconSizes";
-import { colors } from "./constants/theme/colors";
 
 type ShadeScale = {
   50: string;

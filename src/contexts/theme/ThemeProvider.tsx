@@ -1,18 +1,8 @@
-import { createContext } from "react";
-
-import { ThemeProvider as EmotionThemeProvider, Theme } from "@emotion/react";
-import { darkTheme, lightTheme } from "../models/theme";
-import { useLocalStorageState } from "../hooks/useLocalStorageState";
-import { LOCAL_STORAGE_KEYS } from "../constants/theme/localStorageKeys";
-interface ThemeContextType {
-  theme: Theme;
-  toggleTheme: () => void;
-}
-
-export const ThemeContext = createContext<ThemeContextType | undefined>(
-  undefined
-);
-
+import { LOCAL_STORAGE_KEYS } from "../../constants/theme/localStorageKeys";
+import { useLocalStorageState } from "../../hooks/useLocalStorageState";
+import { darkTheme, lightTheme } from "../../models/theme";
+import { ThemeContext } from "./ThemeContext";
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 // TODO listen to system preference (dark or light)
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,

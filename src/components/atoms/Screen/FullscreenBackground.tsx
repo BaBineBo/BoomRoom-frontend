@@ -11,7 +11,7 @@ const FullScreenBackgroundStyled = styled.div`
   background-color: ${({ theme }) => theme.palette.background};
 `;
 
-interface FullScreenBackgroundProps extends PropsWithChildren {}
+type FullScreenBackgroundProps = PropsWithChildren;
 
 /**
  *

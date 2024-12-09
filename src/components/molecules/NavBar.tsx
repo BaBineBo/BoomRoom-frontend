@@ -58,7 +58,7 @@ const StyledLink = styled(Link)`
 
 export const topBarId = "topBarId";
 
-export const TopBar = () => {
+export const NavBar = () => {
   return (
     <TopBarStyled id={topBarId}>
       <Left>

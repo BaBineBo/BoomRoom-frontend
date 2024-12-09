@@ -54,3 +54,4 @@ export default tseslint.config({
 [icons](https://heroicons.com/solid)
 [inspo palette](https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-d4a373)
 [generate theme with realtime colors](https://www.realtimecolors.com/?colors=612800-ffe0d1-8dc346-ffb3d1-fff06b&fonts=Inter-Inter)
+[atomic design](https://atomicdesign.bradfrost.com/table-of-contents/)

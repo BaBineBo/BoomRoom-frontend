@@ -1,7 +1,7 @@
 export const getTransparentColor = (hex: string, alpha: number): string => {
   // Ensure the alpha is between 0 and 1
   const clampedAlpha = Math.min(Math.max(alpha, 0), 1);
-  let noHashtagHex = hex.substring(hex.length - 6, hex.length);
+  const noHashtagHex = hex.substring(hex.length - 6, hex.length);
   // Remove the '#' from the hex color if it exists
 
   // Check for a valid 6-character noHashtagHex
