@@ -27,6 +27,7 @@ interface Shades {
 }
 
 type ThemeMode = "light" | "dark";
+
 declare module "@emotion/react" {
   export interface Theme {
     mode: ThemeMode;

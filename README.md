@@ -55,3 +55,23 @@ export default tseslint.config({
 [inspo palette](https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-d4a373)
 [generate theme with realtime colors](https://www.realtimecolors.com/?colors=612800-ffe0d1-8dc346-ffb3d1-fff06b&fonts=Inter-Inter)
 [atomic design](https://atomicdesign.bradfrost.com/table-of-contents/)
+
+## TODOs
+
+- ~~screen-state in theme (web, phone or tablet)~~
+- mobile-first navbar (hamburger menu)
+- lazy image loader component
+- typography component
+- component for furniture
+- component for rooms
+- form for new furniture
+- use formik for forms, try something new!
+- mock room data in redux, change with queries to mock api calls (?)
+- get tests to run in precommit script
+
+## Kinda big todos so mock this
+
+- learn about database structure
+- users, rooms etc set up how data is stored
+- authentication for users
+- routes for users and their rooms

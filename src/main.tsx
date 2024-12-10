@@ -5,6 +5,9 @@ import ReactDOM from "react-dom/client";
 import { ThemeProvider } from "./contexts/theme/ThemeProvider";
 import GlobalScrollbarStyles from "./utils/GlobalScrollbarStyles";
 import { Router } from "./router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 // Render the app
 const rootElement = document.getElementById("root")!;
@@ -13,8 +16,10 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <ThemeProvider>
-        <GlobalScrollbarStyles />
-        <Router />
+        <QueryClientProvider client={queryClient}>
+          <GlobalScrollbarStyles />
+          <Router />
+        </QueryClientProvider>
       </ThemeProvider>
     </StrictMode>
   );
