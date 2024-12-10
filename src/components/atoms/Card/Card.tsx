@@ -5,9 +5,15 @@ import { useTheme } from "../../../hooks/useTheme";
 interface CardProps extends PropsWithChildren {
   backgroundColor?: string;
   width?: string;
+  center?: boolean;
 }
 
-export const Card = ({ backgroundColor, width, children }: CardProps) => {
+export const Card = ({
+  backgroundColor,
+  width,
+  center,
+  children,
+}: CardProps) => {
   const { windowMode } = useTheme();
 
   const StyledCard = styled.div`
@@ -21,6 +27,8 @@ export const Card = ({ backgroundColor, width, children }: CardProps) => {
     overflow: hidden;
     background: ${({ theme }) => backgroundColor ?? theme.palette.secondary};
     padding: 16px;
+    justify-content: ${center ? "center" : "flex-start"};
+    align-items: ${center ? "center" : "flex-start"};
   `;
 
   return <StyledCard>{children}</StyledCard>;

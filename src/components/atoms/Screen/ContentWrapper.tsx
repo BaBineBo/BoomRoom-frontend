@@ -7,7 +7,6 @@ import { PropsWithChildren } from "react";
  */
 export const ContentWrapper = ({ children }: PropsWithChildren) => {
   const ContentWrapperStyled = styled.div`
-    flex: 1;
     padding: ${({ theme }) => theme.spacing.m};
     padding-left: ${({ theme }) => theme.spacing.l};
     padding-right: ${({ theme }) => theme.spacing.l};

@@ -9,6 +9,7 @@ const FullScreenBackgroundStyled = styled.div`
   width: 100vw; /* 100% of the viewport width */
   height: 100vh; /* 100% of the viewport height */
   background-color: ${({ theme }) => theme.palette.background};
+  overflow-y: scroll;
 `;
 
 type FullScreenBackgroundProps = PropsWithChildren;
