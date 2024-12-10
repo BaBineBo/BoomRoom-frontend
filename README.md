@@ -71,7 +71,7 @@ Det är härifrån som jag fått min första projektidee som jag faktiskt är ta
 
 - ~~screen-state in theme (web, phone or tablet)~~
 - mobile-first navbar (hamburger menu)
-- lazy image loader component
+- ~~lazy image loader component~~
 - typography component
 - component for furniture
 - component for rooms
