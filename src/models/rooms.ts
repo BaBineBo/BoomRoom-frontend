@@ -8,6 +8,7 @@ export type Furniture = {
 };
 
 export type Room = {
+  wallColor?: string;
   id: string;
   name: string;
   furniture: Furniture[];
