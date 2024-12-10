@@ -1,7 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { Card } from "../components/atoms/Card/Card";
 import { useTheme } from "../hooks/useTheme";
-
+import { Text } from "../components/atoms/Text/Text";
 export const Route = createLazyFileRoute("/")({
   component: RouteComponent,
 });
@@ -17,15 +17,15 @@ function RouteComponent() {
       }}
     >
       <Card center>
-        <h1>Hej!</h1>
-        <p>
+        <Text variant="h1">Hej!</Text>
+        <Text>
           Det finns lite bakgrund till projektet längst ner i readmeen. Denna
           sida handlar mest om musik, för jag gillar musik. Ganska mycket.
-        </p>
+        </Text>
       </Card>
       <Card width="200px" backgroundColor={theme.palette.primary} center>
-        <h2>Jag gillar att lyssna på musik</h2>
-        <p>(mina rekommendationer)</p>
+        <Text variant="h1">Jag gillar att lyssna på musik</Text>
+        <Text>(mina rekommendationer)</Text>
         <div
           style={{
             display: "flex",
@@ -72,7 +72,7 @@ function RouteComponent() {
         </div>
       </Card>
       <Card backgroundColor={theme.palette.accent} center>
-        <p>Och så min spellista såklart</p>
+        <Text>Och så min spellista såklart</Text>
         <iframe
           style={{ borderRadius: "12px" }}
           src="https://open.spotify.com/embed/playlist/2xVQjXK70wm3R5QQp08yFN?utm_source=generator"

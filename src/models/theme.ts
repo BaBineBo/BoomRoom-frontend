@@ -3,6 +3,7 @@ import { Theme } from "@emotion/react";
 import { spacing } from "../constants/theme/spacing";
 import { borderRadius } from "../constants/theme/borderRadius";
 import { iconSizes } from "../constants/theme/iconSizes";
+import { fontSizes } from "../constants/theme/fontSizes";
 
 export const lightTheme: Theme = {
   mode: "light",
@@ -93,11 +94,7 @@ export const lightTheme: Theme = {
   borderRadius,
   iconSizes,
   typography: {
-    fontSize: {
-      small: "0.875rem",
-      medium: "1rem",
-      large: "1.25rem",
-    },
+    fontSize: fontSizes,
     fontWeight: {
       light: 300,
       regular: 400,

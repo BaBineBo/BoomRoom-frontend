@@ -8,8 +8,10 @@ import "../assets/fonts/BricolageGrotesque/BricolageGrotesque-VariableFont_opsz,
 import { NavBar } from "../components/molecules/NavBar";
 import { FullScreenBackground } from "../components/atoms/Screen/FullscreenBackground";
 import { ContentWrapper } from "../components/atoms/Screen/ContentWrapper";
+import { NotFound } from "../components/atoms/NotFound/NotFound";
 
 export const Route = createRootRoute({
+  notFoundComponent: NotFound,
   component: () => (
     <FullScreenBackground>
       <NavBar />

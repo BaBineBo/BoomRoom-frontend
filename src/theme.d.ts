@@ -3,6 +3,7 @@ import "@emotion/react";
 import { spacing } from "./constants/theme/spacing";
 import { borderRadius } from "./constants/theme/borderRadius";
 import { iconSizes } from "./constants/theme/iconSizes";
+import { fontSizes } from "./constants/theme/fontSizes";
 
 type ShadeScale = {
   50: string;
@@ -51,19 +52,9 @@ declare module "@emotion/react" {
     iconSizes: typeof iconSizes;
     spacing: typeof spacing;
     borderRadius: typeof borderRadius;
-    borderRadius: {
-      xs: "4px"; // Extra small border radius
-      s: "8px"; // Small border radius
-      m: "12px"; // Medium border radius
-      l: "16px"; // Large border radius
-      xl: "24px"; // Extra large border radius
-    };
+
     typography: {
-      fontSize: {
-        small: string;
-        medium: string;
-        large: string;
-      };
+      fontSize: typeof fontSizes;
       fontWeight: {
         light: number;
         regular: number;
@@ -71,6 +62,5 @@ declare module "@emotion/react" {
       };
       fontFamily: string;
     };
-    spacing: (factor: number) => string;
   }
 }
