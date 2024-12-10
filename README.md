@@ -73,13 +73,14 @@ Det är härifrån som jag fått min första projektidee som jag faktiskt är ta
 - mobile-first navbar (hamburger menu)
 - ~~lazy image loader component~~
 - typography component
-- component for furniture
-- component for rooms
+- ~~component for furniture~~
+- ~~component for rooms~~
 - form for new furniture
 - use formik for forms, try something new!
 - mock room data in redux, change with queries to mock api calls (?)
 - get tests to run in precommit script
 - change background of rooms (like change wall-color, change the cards background)
+- change color theme, don't know what i was thinking
 
 ## Kinda big todos so mock this
 

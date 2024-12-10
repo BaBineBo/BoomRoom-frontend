@@ -6,6 +6,7 @@ import { iconSizes } from "../constants/theme/iconSizes";
 
 export const lightTheme: Theme = {
   mode: "light",
+  shadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
   palette: {
     text: "#612800",
     background: "#ffe0d1",

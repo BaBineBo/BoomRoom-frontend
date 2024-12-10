@@ -2,7 +2,7 @@ import { createLazyFileRoute } from "@tanstack/react-router";
 import { HorizontallScroll } from "../components/atoms/Scroll/HorizontallScroll";
 import { useQueryGetRooms } from "../api/rooms/useQueryGetRooms";
 import { useMemo } from "react";
-import { SquareLazyImage } from "../components/atoms/LazyImage/SquareLazyImage";
+import { RoomCard } from "../components/molecules/RoomCard";
 
 // TODO måste finnas något smart med tanstack router och queries som laddar.
 export const Route = createLazyFileRoute("/rooms")({
@@ -16,9 +16,7 @@ function RouteComponent() {
   if (Q_GET_ROOMS.isLoading) return <>laddar</>;
   return (
     <HorizontallScroll>
-      {rooms?.map((r) => (
-        <SquareLazyImage alt={""} src={r.furniture[0].imageLink ?? ""} />
-      ))}
+      {rooms?.map((r) => <RoomCard room={r} />)}
     </HorizontallScroll>
   );
 }

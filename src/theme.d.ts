@@ -31,6 +31,7 @@ type ThemeMode = "light" | "dark";
 declare module "@emotion/react" {
   export interface Theme {
     mode: ThemeMode;
+    shadow: string;
     palette: {
       primary: string;
       secondary: string;
