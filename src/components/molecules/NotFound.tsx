@@ -1,5 +1,5 @@
-import { Card } from "../Card/Card";
-import { Text } from "../Text/Text";
+import { Card } from "../atoms/Card/Card";
+import { Text } from "../atoms/Text";
 
 export const NotFound = () => {
   return (

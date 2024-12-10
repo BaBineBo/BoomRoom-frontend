@@ -1,7 +1,7 @@
 import { Room } from "../../models/rooms";
 import { Card } from "../atoms/Card/Card";
 import { FurnitureCard } from "./FurnitureCard";
-import { Text } from "../atoms/Text/Text";
+import { Text } from "../atoms/Text";
 interface RoomCardProps {
   room: Room;
 }

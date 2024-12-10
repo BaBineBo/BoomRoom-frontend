@@ -1,8 +1,8 @@
 import { Card } from "../atoms/Card/Card";
 import { Furniture } from "../../models/rooms";
-import { SquareLazyImage } from "../atoms/LazyImage/SquareLazyImage";
+import { SquareLazyImage } from "../atoms/Images/SquareLazyImage";
 import { useTheme } from "../../hooks/useTheme";
-import { Text } from "../atoms/Text/Text";
+import { Text } from "../atoms/Text";
 
 interface FurnitureCardProps {
   furniture: Furniture;

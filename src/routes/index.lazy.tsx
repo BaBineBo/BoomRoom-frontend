@@ -1,7 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { Card } from "../components/atoms/Card/Card";
 import { useTheme } from "../hooks/useTheme";
-import { Text } from "../components/atoms/Text/Text";
+import { Text } from "../components/atoms/Text";
 export const Route = createLazyFileRoute("/")({
   component: RouteComponent,
 });

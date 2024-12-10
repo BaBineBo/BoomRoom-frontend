@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { useTheme } from "../../../hooks/useTheme";
+import { useTheme } from "../../hooks/useTheme";
 import styled from "@emotion/styled";
 import { Theme } from "@emotion/react";
 
