@@ -1,5 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { HorizontallScroll } from "../components/atoms/Scroll/HorizontallScroll";
+import { HorizontallScroll } from "../components/atoms/HorizontallScroll";
 import { useQueryGetRooms } from "../api/rooms/useQueryGetRooms";
 import { useMemo } from "react";
 import { RoomCard } from "../components/molecules/RoomCard";
