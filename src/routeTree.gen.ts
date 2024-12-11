@@ -13,25 +13,47 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as RoomsIndexImport } from './routes/rooms/index'
+import { Route as RoomsRoomIdImport } from './routes/rooms/$roomId'
+import { Route as RoomsRoomIdFurnitureImport } from './routes/rooms/$roomId_.furniture'
+import { Route as RoomsRoomIdFurnitureFurnitureIdImport } from './routes/rooms/$roomId_.furniture_.$furnitureId'
 
 // Create Virtual Routes
 
-const RoomsLazyImport = createFileRoute('/rooms')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
-
-const RoomsLazyRoute = RoomsLazyImport.update({
-  id: '/rooms',
-  path: '/rooms',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/rooms.lazy').then((d) => d.Route))
 
 const IndexLazyRoute = IndexLazyImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+
+const RoomsIndexRoute = RoomsIndexImport.update({
+  id: '/rooms/',
+  path: '/rooms/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const RoomsRoomIdRoute = RoomsRoomIdImport.update({
+  id: '/rooms/$roomId',
+  path: '/rooms/$roomId',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const RoomsRoomIdFurnitureRoute = RoomsRoomIdFurnitureImport.update({
+  id: '/rooms/$roomId_/furniture',
+  path: '/rooms/$roomId/furniture',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const RoomsRoomIdFurnitureFurnitureIdRoute =
+  RoomsRoomIdFurnitureFurnitureIdImport.update({
+    id: '/rooms/$roomId_/furniture_/$furnitureId',
+    path: '/rooms/$roomId/furniture/$furnitureId',
+    getParentRoute: () => rootRoute,
+  } as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -44,11 +66,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
-    '/rooms': {
-      id: '/rooms'
+    '/rooms/$roomId': {
+      id: '/rooms/$roomId'
+      path: '/rooms/$roomId'
+      fullPath: '/rooms/$roomId'
+      preLoaderRoute: typeof RoomsRoomIdImport
+      parentRoute: typeof rootRoute
+    }
+    '/rooms/': {
+      id: '/rooms/'
       path: '/rooms'
       fullPath: '/rooms'
-      preLoaderRoute: typeof RoomsLazyImport
+      preLoaderRoute: typeof RoomsIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/rooms/$roomId_/furniture': {
+      id: '/rooms/$roomId_/furniture'
+      path: '/rooms/$roomId/furniture'
+      fullPath: '/rooms/$roomId/furniture'
+      preLoaderRoute: typeof RoomsRoomIdFurnitureImport
+      parentRoute: typeof rootRoute
+    }
+    '/rooms/$roomId_/furniture_/$furnitureId': {
+      id: '/rooms/$roomId_/furniture_/$furnitureId'
+      path: '/rooms/$roomId/furniture/$furnitureId'
+      fullPath: '/rooms/$roomId/furniture/$furnitureId'
+      preLoaderRoute: typeof RoomsRoomIdFurnitureFurnitureIdImport
       parentRoute: typeof rootRoute
     }
   }
@@ -58,37 +101,68 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
-  '/rooms': typeof RoomsLazyRoute
+  '/rooms/$roomId': typeof RoomsRoomIdRoute
+  '/rooms': typeof RoomsIndexRoute
+  '/rooms/$roomId/furniture': typeof RoomsRoomIdFurnitureRoute
+  '/rooms/$roomId/furniture/$furnitureId': typeof RoomsRoomIdFurnitureFurnitureIdRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
-  '/rooms': typeof RoomsLazyRoute
+  '/rooms/$roomId': typeof RoomsRoomIdRoute
+  '/rooms': typeof RoomsIndexRoute
+  '/rooms/$roomId/furniture': typeof RoomsRoomIdFurnitureRoute
+  '/rooms/$roomId/furniture/$furnitureId': typeof RoomsRoomIdFurnitureFurnitureIdRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexLazyRoute
-  '/rooms': typeof RoomsLazyRoute
+  '/rooms/$roomId': typeof RoomsRoomIdRoute
+  '/rooms/': typeof RoomsIndexRoute
+  '/rooms/$roomId_/furniture': typeof RoomsRoomIdFurnitureRoute
+  '/rooms/$roomId_/furniture_/$furnitureId': typeof RoomsRoomIdFurnitureFurnitureIdRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/rooms'
+  fullPaths:
+    | '/'
+    | '/rooms/$roomId'
+    | '/rooms'
+    | '/rooms/$roomId/furniture'
+    | '/rooms/$roomId/furniture/$furnitureId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/rooms'
-  id: '__root__' | '/' | '/rooms'
+  to:
+    | '/'
+    | '/rooms/$roomId'
+    | '/rooms'
+    | '/rooms/$roomId/furniture'
+    | '/rooms/$roomId/furniture/$furnitureId'
+  id:
+    | '__root__'
+    | '/'
+    | '/rooms/$roomId'
+    | '/rooms/'
+    | '/rooms/$roomId_/furniture'
+    | '/rooms/$roomId_/furniture_/$furnitureId'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
-  RoomsLazyRoute: typeof RoomsLazyRoute
+  RoomsRoomIdRoute: typeof RoomsRoomIdRoute
+  RoomsIndexRoute: typeof RoomsIndexRoute
+  RoomsRoomIdFurnitureRoute: typeof RoomsRoomIdFurnitureRoute
+  RoomsRoomIdFurnitureFurnitureIdRoute: typeof RoomsRoomIdFurnitureFurnitureIdRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
-  RoomsLazyRoute: RoomsLazyRoute,
+  RoomsRoomIdRoute: RoomsRoomIdRoute,
+  RoomsIndexRoute: RoomsIndexRoute,
+  RoomsRoomIdFurnitureRoute: RoomsRoomIdFurnitureRoute,
+  RoomsRoomIdFurnitureFurnitureIdRoute: RoomsRoomIdFurnitureFurnitureIdRoute,
 }
 
 export const routeTree = rootRoute
@@ -102,14 +176,26 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/rooms"
+        "/rooms/$roomId",
+        "/rooms/",
+        "/rooms/$roomId_/furniture",
+        "/rooms/$roomId_/furniture_/$furnitureId"
       ]
     },
     "/": {
       "filePath": "index.lazy.tsx"
     },
-    "/rooms": {
-      "filePath": "rooms.lazy.tsx"
+    "/rooms/$roomId": {
+      "filePath": "rooms/$roomId.tsx"
+    },
+    "/rooms/": {
+      "filePath": "rooms/index.tsx"
+    },
+    "/rooms/$roomId_/furniture": {
+      "filePath": "rooms/$roomId_.furniture.tsx"
+    },
+    "/rooms/$roomId_/furniture_/$furnitureId": {
+      "filePath": "rooms/$roomId_.furniture_.$furnitureId.tsx"
     }
   }
 }

@@ -19,7 +19,7 @@ export const IconButton = ({
 }: IconButtonProps) => {
   const theme = useTheme();
 
-  const calcBackgroundColor = backgroundColor ?? theme.palette.secondary;
+  const calcBackgroundColor = backgroundColor ?? theme.palette.accent;
 
   const IconButtonStyled = styled(motion.button)<IconButtonProps>`
     display: flex;
@@ -34,18 +34,22 @@ export const IconButton = ({
   `;
 
   return (
-    <IconButtonStyled
-      whileHover={{
-        scale: 1.1,
-        backgroundColor: getTransparentColor(calcBackgroundColor, 0.7),
-        rotate: 10,
-      }}
-      whileTap={{ scale: 0.9 }}
-      onClick={onClick}
-      iconColor={iconColor ?? getContrastTextColor(calcBackgroundColor, theme)}
-      backgroundColor={calcBackgroundColor}
-    >
-      {svg}
-    </IconButtonStyled>
+    <div>
+      <IconButtonStyled
+        whileHover={{
+          scale: 1.03,
+          backgroundColor: getTransparentColor(calcBackgroundColor, 0.7),
+          rotate: 1,
+        }}
+        whileTap={{ scale: 0.9 }}
+        onClick={onClick}
+        iconColor={
+          iconColor ?? getContrastTextColor(calcBackgroundColor, theme)
+        }
+        backgroundColor={calcBackgroundColor}
+      >
+        {svg}
+      </IconButtonStyled>
+    </div>
   );
 };

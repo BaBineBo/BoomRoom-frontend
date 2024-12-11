@@ -28,7 +28,7 @@ export const Card = ({
     background: ${({ theme }) => backgroundColor ?? theme.palette.secondary};
     padding: 16px;
     justify-content: ${center ? "center" : "flex-start"};
-    align-items: ${center ? "center" : "flex-start"};
+    ${center && "align-items:center"};
   `;
 
   return <StyledCard>{children}</StyledCard>;

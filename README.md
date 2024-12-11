@@ -64,7 +64,7 @@ Det är härifrån som jag fått min första projektidee som jag faktiskt är ta
 
 [icons](https://heroicons.com/solid)
 [inspo palette](https://coolors.co/palette/ccd5ae-e9edc9-fefae0-faedcd-d4a373)
-[generate theme with realtime colors](https://www.realtimecolors.com/?colors=612800-ffe0d1-8dc346-ffb3d1-fff06b&fonts=Inter-Inter)
+[generate theme with realtime colors](https://www.realtimecolors.com/?colors=612800-ffe0d1-9fc46e-c3de8c-da9d72&fonts=Inter-Inter)
 [atomic design](https://atomicdesign.bradfrost.com/table-of-contents/)
 
 ## TODOs
@@ -72,15 +72,21 @@ Det är härifrån som jag fått min första projektidee som jag faktiskt är ta
 - ~~screen-state in theme (web, phone or tablet)~~
 - mobile-first navbar (hamburger menu)
 - ~~lazy image loader component~~
-- typography component
+- ~~typography component~~
 - ~~component for furniture~~
 - ~~component for rooms~~
-- form for new furniture
-- use formik for forms, try something new!
+- ~~form for new furniture~~
+- ~~use formik for forms, try something new!~~
 - mock room data in redux, change with queries to mock api calls (?)
 - get tests to run in precommit script
 - change background of rooms (like change wall-color, change the cards background)
-- change color theme, don't know what i was thinking
+- ~~change color theme, don't know what i was thinking~~
+- use perfectionist.dev for alphabetical sorting of everything
+- icons from react-icons ? on npm
+- tanstack-virtual for virtualization of lists
+- ~~create fullscreen-modal component~~
+- ~~create form for creating new furniture~~
+- gather all todos and fix them
 
 ## Kinda big todos so mock this
 

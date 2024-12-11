@@ -39,6 +39,7 @@ declare module "@emotion/react" {
       background: string;
       text: string;
       accent: string;
+      red: string;
     };
     gradients: {
       linearPrimarySecondary: string;
@@ -48,7 +49,7 @@ declare module "@emotion/react" {
       radialPrimaryAccent: string;
       radialSecondaryAccent: string;
     };
-    shades: Shades;
+    //    shades: Shades;
     iconSizes: typeof iconSizes;
     spacing: typeof spacing;
     borderRadius: typeof borderRadius;

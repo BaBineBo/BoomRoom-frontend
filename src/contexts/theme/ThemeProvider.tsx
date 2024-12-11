@@ -1,9 +1,9 @@
+import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 import { useLayoutEffect, useState } from "react";
 import { LOCAL_STORAGE_KEYS } from "../../constants/theme/localStorageKeys";
 import { useLocalStorageState } from "../../hooks/useLocalStorageState";
 import { darkTheme, lightTheme } from "../../models/theme";
 import { ThemeContext, WindowMode } from "./ThemeContext";
-import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
 
 // TODO listen to system preference (dark or light)
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -32,7 +32,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
         // printed alot
         setWindowMode(() => "tablet");
         console.log("tablet size");
-      } else if (windowMode !== "web") {
+      } else {
         // never printed with "web"
         console.log("mode is", windowMode);
         setWindowMode(() => "web");
@@ -43,6 +43,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     window.addEventListener("resize", updateWindowMode);
 
     return () => window.removeEventListener("resize", updateWindowMode);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleTheme = () => {

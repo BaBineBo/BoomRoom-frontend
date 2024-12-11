@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import { Link } from "@tanstack/react-router";
-import { ToggleTheme } from "./ToggleTheme";
+import { LinkingText } from "../atoms/LinkingText";
+import { NavBarButton } from "../molecules/NavBarButton";
+import { ToggleTheme } from "../molecules/ToggleTheme";
 
 const TopBarStyled = styled.div`
   top: 0;
@@ -44,17 +45,6 @@ const Middle = styled.h1`
   padding: ${({ theme }) => theme.spacing.s};
   color: ${({ theme }) => theme.palette.text};
 `;
-const StyledLink = styled(Link)`
-  text-decoration: none;
-
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
-  }
-`;
 
 export const topBarId = "topBarId";
 
@@ -62,12 +52,12 @@ export const NavBar = () => {
   return (
     <TopBarStyled id={topBarId}>
       <Left>
-        <StyledLink to="/">Home</StyledLink>
-        <StyledLink to="/rooms">Rooms</StyledLink>
+        <NavBarButton to="/" text="Hem" />
+        <NavBarButton to="/rooms" text="Rum" />
       </Left>
-      <StyledLink to="/" style={{}}>
+      <LinkingText to="/" style={{}}>
         <Middle>BoomRoom</Middle>
-      </StyledLink>
+      </LinkingText>
       <Right>
         <ToggleTheme />
       </Right>

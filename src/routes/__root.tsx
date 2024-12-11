@@ -5,7 +5,7 @@ import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import "../../index.css";
 import "../assets/fonts/DynaPuff/DynaPuff-VariableFont_wdth,wght.ttf";
 import "../assets/fonts/BricolageGrotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf";
-import { NavBar } from "../components/molecules/NavBar";
+import { NavBar } from "../components/organisms/NavBar";
 import { FullScreenBackground } from "../components/atoms/Screen/FullscreenBackground";
 import { ContentWrapper } from "../components/atoms/Screen/ContentWrapper";
 import { NotFound } from "../components/molecules/NotFound";

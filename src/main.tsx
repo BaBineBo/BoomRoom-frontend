@@ -7,7 +7,7 @@ import GlobalScrollbarStyles from "./utils/GlobalScrollbarStyles";
 import { Router } from "./router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
+export const queryClient = new QueryClient();
 
 // Render the app
 const rootElement = document.getElementById("root")!;

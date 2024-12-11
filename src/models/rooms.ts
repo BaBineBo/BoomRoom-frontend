@@ -5,6 +5,7 @@ export type Furniture = {
   productLink?: string;
   // Surely there is a way to see if a website has images that could be used? hmmm
   imageLink?: string;
+  roomId: string;
   id: string;
 };
 

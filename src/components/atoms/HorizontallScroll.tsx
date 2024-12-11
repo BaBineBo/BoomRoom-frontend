@@ -8,6 +8,7 @@ const HorizontallScrollStyled = styled.div`
   gap: ${({ theme }) => theme.spacing.l};
 `;
 
+// TODO fix or remove - did cut of shadows from cards, not sure if necessary component
 export const HorizontallScroll = ({ children }: PropsWithChildren) => {
   return <HorizontallScrollStyled>{children}</HorizontallScrollStyled>;
 };
